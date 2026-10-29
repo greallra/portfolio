@@ -8,6 +8,7 @@ export const profile = {
   location: "Dublin, Ireland",
   email: "Greallra@tcd.ie",
   linkedin: "https://www.linkedin.com/in/ronan-greally",
+  github: "https://github.com/greallra",
   // Background-removed version of assets/me.png; initials show if missing.
   photo: { src: `${base}/profile.png`, file: "public/profile.png" },
   summary:

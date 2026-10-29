@@ -48,6 +48,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-2">
             <a href={`mailto:${profile.email}`} className={`${button} bg-white text-[#0f2747] hover:bg-white/85`}>Email me</a>
             <a href={profile.linkedin} target="_blank" rel="noreferrer" className={`${button} border border-white/30 hover:bg-white/10`}>LinkedIn</a>
+            <a href={profile.github} target="_blank" rel="noreferrer" className={`${button} border border-white/30 hover:bg-white/10`}>GitHub</a>
           </div>
         </div>
       </section>
