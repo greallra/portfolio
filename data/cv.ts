@@ -90,9 +90,9 @@ export const skills: { group: string; items: string[] }[] = [
     items: ["Node.js", "Express", "Python", "Django", "REST APIs", "Supabase", "PostgreSQL", "AWS RDS"],
   },
   { group: "State & Forms", items: ["TanStack Query", "Zustand", "React Hook Form", "Zod"] },
-  { group: "Testing", items: ["Vitest", "React Testing Library", "MSW"] },
+  { group: "Testing & Practice", items: ["Vitest", "React Testing Library", "MSW", "Agile"] },
   { group: "UI & Visualisation", items: ["Storybook", "AG Grid", "Recharts", "Three.js", "A-Frame", "Figma"] },
-  { group: "Tooling", items: ["Git", "Docker", "CI/CD", "Vercel", "Agile"] },
+  { group: "CI/CD & Cloud", items: ["AWS", "Azure", "Netlify", "Vercel", "Docker", "Git"] },
 ];
 
 export const education = [

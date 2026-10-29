@@ -81,11 +81,11 @@ export default function Home() {
 
       {/* Skills */}
       <Card title="Skills" className="lg:col-span-4 lg:row-span-2">
-        <div className="space-y-3">
+        <div className="space-y-3 short:space-y-2">
           {skills.map((s) => (
             <div key={s.group}>
-              <h3 className="mb-1.5 text-xs font-semibold">{s.group}</h3>
-              <ul className="flex flex-wrap gap-1.5">
+              <h3 className="mb-1.5 text-xs font-semibold short:mb-1">{s.group}</h3>
+              <ul className="flex flex-wrap gap-1.5 short:gap-1">
                 {s.items.map((item) => (
                   <Tag key={item}>{item}</Tag>
                 ))}
