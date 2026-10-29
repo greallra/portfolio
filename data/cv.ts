@@ -9,8 +9,8 @@ export const profile = {
   email: "Greallra@tcd.ie",
   linkedin: "https://www.linkedin.com/in/ronan-greally",
   cv: `${base}/Ronan_Greally_CV.pdf`,
-  // Drop the photo at public/profile.jpg; initials show until then.
-  photo: { src: `${base}/profile.jpg`, file: "public/profile.jpg" },
+  // Background-removed version of assets/me.png; initials show if missing.
+  photo: { src: `${base}/profile.png`, file: "public/profile.png" },
   summary:
     "6+ years building scalable fintech, enterprise and SaaS platforms across Ireland and Europe. Deep expertise in React, TypeScript and frontend architecture — from design system to production.",
   availability: ["Contract or permanent", "Remote, hybrid or on-site", "Ireland & EU work authorisation"],
