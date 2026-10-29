@@ -21,6 +21,7 @@ export type Job = {
   company: string;
   period: string;
   summary: string;
+  url?: string;
 };
 
 export const experience: Job[] = [
@@ -29,18 +30,21 @@ export const experience: Job[] = [
     company: "Restday",
     period: "2026 — Now",
     summary: "Burnout-recovery app MVP in React Native & Supabase.",
+    url: "https://www.restday.ie/",
   },
   {
     role: "Full Stack Developer (Contract)",
     company: "Flip Lingoes",
     period: "2026",
     summary: "Django REST APIs, PostgreSQL tuning and Docker.",
+    url: "https://www.fliplingoes.com/",
   },
   {
     role: "Full Stack Developer (Contract)",
     company: "Xace",
     period: "2025 — 26",
     summary: "Banking platform rebuild in React, Node.js & AWS RDS.",
+    url: "https://www.xace.io/",
   },
   {
     role: "React Developer",
@@ -65,12 +69,14 @@ export const experience: Job[] = [
     company: "Snapsea",
     period: "2020 — 21",
     summary: "Media galleries for a content-rights platform.",
+    url: "https://www.snapsea.io/",
   },
   {
-    role: "Frontend Developer Intern",
+    role: "Frontend Intern",
     company: "Open Litter Map",
     period: "2019 — 20",
     summary: "Vue.js mapping features with Leaflet.",
+    url: "https://openlittermap.com/",
   },
 ];
 

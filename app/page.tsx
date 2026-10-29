@@ -61,7 +61,15 @@ export default function Home() {
               <span className={`absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-surface ${i === 0 ? "bg-accent" : "bg-line"}`} />
               <div className="flex items-baseline justify-between gap-3">
                 <h3 className="text-sm font-semibold leading-snug">
-                  {job.company} <span className="font-normal text-muted">· {job.role}</span>
+                  {job.url ? (
+                    <a href={job.url} target="_blank" rel="noreferrer" className="group hover:text-accent">
+                      {job.company}
+                      <span className="ml-0.5 text-[11px] text-muted group-hover:text-accent" aria-hidden>↗</span>
+                    </a>
+                  ) : (
+                    job.company
+                  )}{" "}
+                  <span className="font-normal text-muted">· {job.role}</span>
                 </h3>
                 <span className="shrink-0 text-[11px] tabular-nums text-muted">{job.period}</span>
               </div>
