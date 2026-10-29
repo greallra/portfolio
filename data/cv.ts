@@ -8,11 +8,10 @@ export const profile = {
   location: "Dublin, Ireland",
   email: "Greallra@tcd.ie",
   linkedin: "https://www.linkedin.com/in/ronan-greally",
-  cv: `${base}/Ronan_Greally_CV.pdf`,
   // Background-removed version of assets/me.png; initials show if missing.
   photo: { src: `${base}/profile.png`, file: "public/profile.png" },
   summary:
-    "6+ years building scalable fintech, enterprise and SaaS platforms across Ireland and Europe. Deep expertise in React, TypeScript and frontend architecture — from design system to production.",
+    "Full stack engineer with 6+ years building scalable fintech, enterprise and SaaS platforms across Ireland and Europe. React and TypeScript on the frontend; Node.js, Python/Django and PostgreSQL on the backend — from database schema to production UI.",
   availability: ["Contract or permanent", "Remote, hybrid or on-site", "Ireland & EU work authorisation"],
 };
 
