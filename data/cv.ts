@@ -94,8 +94,13 @@ export const education = [
   { degree: "BA Spanish & Italian", school: "Trinity College Dublin" },
 ];
 
+export const music = {
+  artist: "El Pooch",
+  url: "https://open.spotify.com/artist/2MgFNBYN5vfrWSolISQljO",
+  embed: "https://open.spotify.com/embed/artist/2MgFNBYN5vfrWSolISQljO?theme=0",
+};
+
 export const interests = [
-  { icon: "music", label: "Music" },
   { icon: "sports", label: "Sports" },
-  { icon: "languages", label: "Languages", note: "Spanish & Italian" },
+  { icon: "languages", label: "Languages · Spanish & Italian" },
 ] as const;

@@ -1,5 +1,5 @@
 import { existsSync } from "node:fs";
-import { education, experience, interests, profile, skills } from "@/data/cv";
+import { education, experience, interests, music, profile, skills } from "@/data/cv";
 import { Card, Icon, Tag } from "@/components/Section";
 
 const hasPhoto = existsSync(profile.photo.file);
@@ -86,14 +86,28 @@ export default function Home() {
         </div>
       </Card>
 
-      {/* Interests */}
-      <Card title="Interests" className="lg:col-span-4">
-        <ul className="grid grid-cols-3 gap-2">
+      {/* Off the clock */}
+      <Card title="Off the clock" className="lg:col-span-4">
+        <p className="mb-2 flex items-center gap-2 text-sm">
+          <span className="text-accent"><Icon name="music" /></span>
+          I also make music as{" "}
+          <a href={music.url} target="_blank" rel="noreferrer" className="font-semibold text-accent underline-offset-4 hover:underline">
+            {music.artist}
+          </a>
+        </p>
+        <iframe
+          src={music.embed}
+          title={`${music.artist} on Spotify`}
+          height={80}
+          loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          className="w-full rounded-xl border-0"
+        />
+        <ul className="mt-2 flex flex-wrap gap-2">
           {interests.map((i) => (
-            <li key={i.label} className="flex flex-col items-center gap-1.5 rounded-2xl bg-accent-soft px-2 py-3 short:gap-1 short:py-2 text-center text-accent">
+            <li key={i.label} className="flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent [&_svg]:h-4 [&_svg]:w-4">
               <Icon name={i.icon} />
-              <span className="text-sm font-semibold">{i.label}</span>
-              {"note" in i && <span className="text-[11px] leading-tight opacity-75">{i.note}</span>}
+              {i.label}
             </li>
           ))}
         </ul>
