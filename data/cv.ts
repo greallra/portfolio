@@ -6,7 +6,7 @@ export const profile = {
   location: "Dublin, Ireland",
   email: "Greallra@tcd.ie",
   linkedin: "https://www.linkedin.com/in/ronan-greally",
-  cv: "/Ronan_Greally_CV.pdf",
+  cv: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/Ronan_Greally_CV.pdf`,
   tagline:
     "I build scalable fintech, enterprise and SaaS platforms — from design system to production.",
   summary: [
