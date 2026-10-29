@@ -9,4 +9,4 @@ pnpm build
 ```
 
 All content lives in `data/cv.ts`. The downloadable CV is `public/Ronan_Greally_CV.pdf`.
-Deploy by importing the repo into Vercel (no config needed).
+`pnpm build` writes a static site to `out/`. Deploy free on Vercel (import the repo), or upload `out/` to Netlify, Cloudflare Pages or GitHub Pages.
