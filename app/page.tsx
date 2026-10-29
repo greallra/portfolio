@@ -55,7 +55,7 @@ export default function Home() {
 
       {/* Experience */}
       <Card title="Experience" className="lg:col-span-4 lg:row-span-3">
-        <ol className="relative space-y-3 border-l border-line pl-4 xl:space-y-4 short:space-y-2">
+        <ol className="relative ml-1.5 space-y-3 border-l border-line pl-4 xl:space-y-4 short:space-y-2">
           {experience.map((job, i) => (
             <li key={job.company} className="relative">
               <span className={`absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-surface ${i === 0 ? "bg-accent" : "bg-line"}`} />
