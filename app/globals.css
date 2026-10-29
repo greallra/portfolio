@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Tighter spacing on short laptop screens so everything fits without scrolling */
+@custom-variant short (@media (min-width: 1024px) and (max-height: 820px));
+
 @theme {
   --color-bg: #f7f6f2;
   --color-surface: #ffffff;
@@ -32,6 +35,18 @@ body {
   background: var(--color-bg);
   color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Deep navy gradient with soft glows behind the intro card */
+.hero {
+  background:
+    radial-gradient(60% 50% at 85% 10%, rgb(94 156 255 / 0.35), transparent 70%),
+    radial-gradient(50% 40% at 0% 100%, rgb(45 212 191 / 0.22), transparent 70%),
+    linear-gradient(160deg, #0f2747 0%, #0a1a30 100%);
+}
+
+.photo-ring {
+  background: conic-gradient(from 200deg, #5e9cff, #2dd4bf, #a78bfa, #5e9cff);
 }
 
 ::selection {

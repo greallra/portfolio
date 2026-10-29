@@ -1,151 +1,102 @@
 // Single source of truth for site content, transcribed from the CV.
 
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const profile = {
   name: "Ronan Greally",
   title: "Full Stack Engineer",
   location: "Dublin, Ireland",
   email: "Greallra@tcd.ie",
   linkedin: "https://www.linkedin.com/in/ronan-greally",
-  cv: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/Ronan_Greally_CV.pdf`,
-  tagline:
-    "I build scalable fintech, enterprise and SaaS platforms — from design system to production.",
-  summary: [
-    "Full Stack Engineer with 6+ years building scalable fintech, enterprise and SaaS platforms across Ireland and Europe.",
-    "Deep expertise in React, TypeScript and modern frontend architecture, with a track record delivering complex financial systems, reusable component libraries, role-based platforms and data-heavy applications in agile teams.",
-    "Comfortable owning frontend architecture decisions end to end, from design system to production.",
-  ],
+  cv: `${base}/Ronan_Greally_CV.pdf`,
+  // Drop the photo at public/profile.jpg; initials show until then.
+  photo: { src: `${base}/profile.jpg`, file: "public/profile.jpg" },
+  summary:
+    "6+ years building scalable fintech, enterprise and SaaS platforms across Ireland and Europe. Deep expertise in React, TypeScript and frontend architecture — from design system to production.",
+  availability: ["Contract or permanent", "Remote, hybrid or on-site", "Ireland & EU work authorisation"],
 };
 
 export type Job = {
   role: string;
   company: string;
   period: string;
-  location: string;
-  points: string[];
-  stack?: string[];
+  summary: string;
 };
 
 export const experience: Job[] = [
   {
     role: "Full Stack Engineer",
     company: "Restday",
-    period: "May 2026 — Present",
-    location: "Dublin, Ireland",
-    points: [
-      "Led development of the MVP for Restday, a wellness recovery platform based on the Burnout Assessment Tool (BAT), taking it from concept to launch.",
-      "Developed a React Native (Expo) app backed by Supabase, using PostgreSQL, authentication and Row Level Security to secure sensitive health data.",
-      "Implemented onboarding, authentication, BAT assessments, personalised recovery profiles, daily recovery plans, journaling, progress tracking and safety escalation flows.",
-      "Designed the database schema and migrations, and defined secure handling policies for health data.",
-      "Drove product design and UX in Figma alongside engineering delivery.",
-    ],
-    stack: ["React Native", "Expo", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS", "Vercel", "Figma"],
+    period: "2026 — Now",
+    summary: "Led a burnout-recovery app MVP from concept to launch: React Native, Expo, Supabase and RLS-secured health data.",
   },
   {
     role: "Full Stack Developer (Contract)",
     company: "Flip Lingoes",
-    period: "Jun 2026",
-    location: "Remote",
-    points: [
-      "Built and maintained web applications in Python and Django, delivering REST APIs and backend services.",
-      "Designed and optimised PostgreSQL schemas and SQL queries; containerised applications with Docker.",
-      "Worked directly with stakeholders to scope and ship features to deadline, covering testing, bug fixing and deployment.",
-    ],
-    stack: ["Python", "Django", "PostgreSQL", "Docker", "REST APIs", "Git"],
+    period: "2026",
+    summary: "Python/Django REST APIs, PostgreSQL schema and query optimisation, Docker.",
   },
   {
     role: "Full Stack Developer (Contract)",
     company: "Xace",
-    period: "Nov 2025 — May 2026",
-    location: "London, UK",
-    points: [
-      "Redeveloped a banking platform in React, TypeScript, Node.js and Vite, migrating legacy functionality onto the new stack.",
-      "Built frontend and backend features across transaction workflows, dashboards and reporting, including REST APIs in Node.js.",
-      "Designed AWS RDS SQL databases and implemented role-based access control across the platform.",
-      "Established a Storybook component library to standardise UI across teams.",
-      "Wrote unit and integration tests with Vitest and React Testing Library, using MSW for API mocking.",
-    ],
-    stack: ["React", "TypeScript", "Node.js", "Express", "AWS RDS", "SQL", "Vite", "Storybook", "Vitest", "RTL", "MSW"],
+    period: "2025 — 26",
+    summary: "Rebuilt a banking platform in React and Node.js with role-based access, AWS RDS and a Storybook library.",
   },
   {
     role: "React Developer",
     company: "FinanceFair",
-    period: "Sep 2024 — Nov 2025",
-    location: "Dublin, Ireland",
-    points: [
-      "Led frontend architecture for banking platforms, establishing a scalable React structure and reusable UI systems.",
-      "Built advanced data tables, payment workflows and secure file upload/download.",
-      "Created reporting dashboards with Recharts and delivered a reusable Shadcn UI component set.",
-    ],
-    stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Shadcn UI", "Zustand", "TanStack Query", "React Hook Form", "Zod", "Vitest"],
+    period: "2024 — 25",
+    summary: "Led frontend architecture for banking platforms: data tables, payment workflows, Recharts dashboards.",
   },
   {
     role: "Vue.js Developer",
     company: "Engage XR",
-    period: "Sep 2023 — Sep 2024",
-    location: "Waterford, Ireland",
-    points: [
-      "Built enterprise applications supporting over 100,000 users, including event management features.",
-      "Implemented dashboards, forms, data tables and payment workflows in Vue and Nuxt.",
-      "Created reusable components and contributed to the shared Storybook design system.",
-    ],
-    stack: ["Vue.js", "Nuxt.js", "Storybook", "AG Grid"],
+    period: "2023 — 24",
+    summary: "Enterprise Vue/Nuxt apps serving 100,000+ users; shared Storybook design system.",
   },
   {
     role: "Full Stack Developer",
     company: "Davra",
-    period: "Feb 2021 — Sep 2023",
-    location: "Dublin, Ireland",
-    points: [
-      "Developed a virtual events platform and its administration portal.",
-      "Implemented 3D interaction and spatial audio using Three.js and A-Frame, optimising rendering performance.",
-    ],
-    stack: ["Vue.js", "Three.js", "A-Frame", "JavaScript"],
+    period: "2021 — 23",
+    summary: "Virtual events platform with 3D interaction and spatial audio in Three.js and A-Frame.",
   },
   {
     role: "React Developer",
     company: "Snapsea",
-    period: "Jun 2020 — Feb 2021",
-    location: "Remote",
-    points: [
-      "Developed features for an Instagram content rights platform, including media galleries and video playback.",
-      "Integrated REST APIs and improved UX and scalability.",
-    ],
+    period: "2020 — 21",
+    summary: "Media galleries and video playback for an Instagram content-rights platform.",
   },
   {
     role: "Frontend Developer Intern",
     company: "Open Litter Map",
-    period: "Nov 2019 — Jun 2020",
-    location: "Cork, Ireland",
-    points: [
-      "Built frontend features in Vue.js with mapping functionality using Leaflet, and a responsive UI with Bulma.",
-    ],
+    period: "2019 — 20",
+    summary: "Vue.js mapping features with Leaflet and a responsive Bulma UI.",
   },
 ];
 
 export const skills: { group: string; items: string[] }[] = [
   {
     group: "Frontend",
-    items: ["React", "React Native", "TypeScript", "JavaScript", "Next.js", "Vue.js", "Nuxt.js", "Expo", "Vite", "HTML5", "CSS3", "Tailwind CSS", "Shadcn UI"],
+    items: ["React", "React Native", "TypeScript", "Next.js", "Vue.js", "Nuxt.js", "Expo", "Vite", "Tailwind CSS", "Shadcn UI"],
   },
   {
     group: "Backend & Data",
-    items: ["Node.js", "Express", "Python", "Django", "REST APIs", "Supabase", "PostgreSQL", "AWS RDS", "SQL"],
+    items: ["Node.js", "Express", "Python", "Django", "REST APIs", "Supabase", "PostgreSQL", "AWS RDS"],
   },
   { group: "State & Forms", items: ["TanStack Query", "Zustand", "React Hook Form", "Zod"] },
   { group: "Testing", items: ["Vitest", "React Testing Library", "MSW"] },
   { group: "UI & Visualisation", items: ["Storybook", "AG Grid", "Recharts", "Three.js", "A-Frame", "Figma"] },
-  { group: "Tooling & Practice", items: ["Git", "Docker", "CI/CD", "Vercel", "Agile", "Component-Driven Development"] },
+  { group: "Tooling", items: ["Git", "Docker", "CI/CD", "Vercel", "Agile"] },
 ];
 
 export const education = [
-  { degree: "Higher Diploma in Web & Cloud Development", school: "Dublin Business School, Dublin" },
-  { degree: "MA in Audiovisual Translation", school: "Universidad Europea, Madrid" },
-  { degree: "BA in Spanish & Italian", school: "Trinity College Dublin" },
+  { degree: "H.Dip Web & Cloud Development", school: "Dublin Business School" },
+  { degree: "MA Audiovisual Translation", school: "Universidad Europea, Madrid" },
+  { degree: "BA Spanish & Italian", school: "Trinity College Dublin" },
 ];
 
-export const details = [
-  { label: "Work authorisation", value: "Ireland and EU" },
-  { label: "Availability", value: "Contract or permanent; remote, hybrid or on-site" },
-  { label: "Working style", value: "Agile, distributed teams" },
-  { label: "Interests", value: "Sports, music, languages" },
-];
+export const interests = [
+  { icon: "music", label: "Music" },
+  { icon: "sports", label: "Sports" },
+  { icon: "languages", label: "Languages", note: "Spanish & Italian" },
+] as const;

@@ -8,10 +8,10 @@ const heading = Instrument_Serif({ subsets: ["latin"], weight: "400", variable: 
 
 export const metadata: Metadata = {
   title: `${profile.name} · ${profile.title}`,
-  description: profile.summary[0],
+  description: profile.summary,
   openGraph: {
     title: `${profile.name} · ${profile.title}`,
-    description: profile.tagline,
+    description: profile.summary,
     type: "website",
   },
 };
