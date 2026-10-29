@@ -28,49 +28,49 @@ export const experience: Job[] = [
     role: "Full Stack Engineer",
     company: "Restday",
     period: "2026 — Now",
-    summary: "Led a burnout-recovery app MVP from concept to launch: React Native, Expo, Supabase and RLS-secured health data.",
+    summary: "Burnout-recovery app MVP in React Native & Supabase.",
   },
   {
     role: "Full Stack Developer (Contract)",
     company: "Flip Lingoes",
     period: "2026",
-    summary: "Python/Django REST APIs, PostgreSQL schema and query optimisation, Docker.",
+    summary: "Django REST APIs, PostgreSQL tuning and Docker.",
   },
   {
     role: "Full Stack Developer (Contract)",
     company: "Xace",
     period: "2025 — 26",
-    summary: "Rebuilt a banking platform in React and Node.js with role-based access, AWS RDS and a Storybook library.",
+    summary: "Banking platform rebuild in React, Node.js & AWS RDS.",
   },
   {
     role: "React Developer",
     company: "FinanceFair",
     period: "2024 — 25",
-    summary: "Led frontend architecture for banking platforms: data tables, payment workflows, Recharts dashboards.",
+    summary: "Frontend architecture for banking platforms.",
   },
   {
     role: "Vue.js Developer",
     company: "Engage XR",
     period: "2023 — 24",
-    summary: "Enterprise Vue/Nuxt apps serving 100,000+ users; shared Storybook design system.",
+    summary: "Vue/Nuxt enterprise apps for 100,000+ users.",
   },
   {
     role: "Full Stack Developer",
     company: "Davra",
     period: "2021 — 23",
-    summary: "Virtual events platform with 3D interaction and spatial audio in Three.js and A-Frame.",
+    summary: "Virtual events with 3D and spatial audio in Three.js.",
   },
   {
     role: "React Developer",
     company: "Snapsea",
     period: "2020 — 21",
-    summary: "Media galleries and video playback for an Instagram content-rights platform.",
+    summary: "Media galleries for a content-rights platform.",
   },
   {
     role: "Frontend Developer Intern",
     company: "Open Litter Map",
     period: "2019 — 20",
-    summary: "Vue.js mapping features with Leaflet and a responsive Bulma UI.",
+    summary: "Vue.js mapping features with Leaflet.",
   },
 ];
 
@@ -93,6 +93,23 @@ export const education = [
   { degree: "H.Dip Web & Cloud Development", school: "Dublin Business School" },
   { degree: "MA Audiovisual Translation", school: "Universidad Europea, Madrid" },
   { degree: "BA Spanish & Italian", school: "Trinity College Dublin" },
+];
+
+export const projects = [
+  {
+    name: "Vocab Frog",
+    kind: "iOS app",
+    summary: "Vocabulary game, A1 to C2.",
+    url: "https://apps.apple.com/ie/app/vocab-frog/id6803961515",
+    icon: `${base}/projects/vocab-frog.png`,
+  },
+  {
+    name: "Restday",
+    kind: "Web & mobile",
+    summary: "8-week burnout recovery programme.",
+    url: "https://www.restday.ie/",
+    icon: `${base}/projects/restday.svg`,
+  },
 ];
 
 export const music = {

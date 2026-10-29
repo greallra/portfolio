@@ -1,0 +1,12 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" rx="22" fill="#9DCDFD"/>
+  <!-- R top-left -->
+  <text x="6" y="50" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="900" fill="white">R</text>
+  <!-- Two equal bars top-right -->
+  <rect x="54" y="14" width="38" height="10" rx="3" fill="white"/>
+  <rect x="54" y="30" width="38" height="10" rx="3" fill="white"/>
+  <!-- S bottom-left -->
+  <text x="6" y="88" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="900" fill="white">S</text>
+  <!-- T. bottom-right -->
+  <text x="50" y="88" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="900" fill="white">T.</text>
+</svg>

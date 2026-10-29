@@ -1,5 +1,5 @@
 import { existsSync } from "node:fs";
-import { education, experience, interests, music, profile, skills } from "@/data/cv";
+import { education, experience, interests, music, profile, projects, skills } from "@/data/cv";
 import { Card, Icon, Tag } from "@/components/Section";
 
 const hasPhoto = existsSync(profile.photo.file);
@@ -54,7 +54,7 @@ export default function Home() {
       </section>
 
       {/* Experience */}
-      <Card title="Experience" className="lg:col-span-4 lg:row-span-3">
+      <Card title="Experience" className="lg:col-span-4 lg:row-span-2">
         <ol className="relative ml-1.5 space-y-3 border-l border-line pl-4 xl:space-y-4 short:space-y-2">
           {experience.map((job, i) => (
             <li key={job.company} className="relative">
@@ -65,7 +65,7 @@ export default function Home() {
                 </h3>
                 <span className="shrink-0 text-[11px] tabular-nums text-muted">{job.period}</span>
               </div>
-              <p className="mt-0.5 text-[13px] leading-snug text-muted short:text-xs">{job.summary}</p>
+              <p className="mt-0.5 truncate text-[13px] leading-snug text-muted short:text-xs">{job.summary}</p>
             </li>
           ))}
         </ol>
@@ -109,6 +109,32 @@ export default function Home() {
             <li key={i.label} className="flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent [&_svg]:h-4 [&_svg]:w-4">
               <Icon name={i.icon} />
               {i.label}
+            </li>
+          ))}
+        </ul>
+      </Card>
+
+      {/* Projects */}
+      <Card title="Projects" className="lg:col-span-4">
+        <ul className="space-y-2">
+          {projects.map((p) => (
+            <li key={p.name}>
+              <a
+                href={p.url}
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center gap-3 rounded-2xl p-2 transition-colors hover:bg-accent-soft"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.icon} alt="" className="h-11 w-11 shrink-0 rounded-xl" />
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold">
+                    {p.name} <span className="font-normal text-muted">· {p.kind}</span>
+                  </p>
+                  <p className="text-xs text-muted">{p.summary}</p>
+                </div>
+                <span className="ml-auto text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-accent" aria-hidden>↗</span>
+              </a>
             </li>
           ))}
         </ul>
