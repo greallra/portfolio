@@ -116,17 +116,17 @@ export default function Home() {
 
       {/* Projects */}
       <Card title="Projects" className="lg:col-span-4">
-        <ul className="space-y-2">
+        <ul className="space-y-1">
           {projects.map((p) => (
             <li key={p.name}>
               <a
                 href={p.url}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center gap-3 rounded-2xl p-2 transition-colors hover:bg-accent-soft"
+                className="group flex items-center gap-3 rounded-2xl p-1.5 transition-colors hover:bg-accent-soft"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.icon} alt="" className="h-11 w-11 shrink-0 rounded-xl" />
+                <img src={p.icon} alt="" className="h-9 w-9 shrink-0 rounded-[10px]" />
                 <div className="min-w-0">
                   <p className="text-sm font-semibold">
                     {p.name} <span className="font-normal text-muted">· {p.kind}</span>

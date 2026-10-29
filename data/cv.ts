@@ -104,6 +104,13 @@ export const projects = [
     icon: `${base}/projects/vocab-frog.png`,
   },
   {
+    name: "Lingovibes",
+    kind: "iOS app",
+    summary: "Real-world slang and idioms.",
+    url: "https://apps.apple.com/us/app/lingovibes/id6783851194",
+    icon: `${base}/projects/lingovibes.png`,
+  },
+  {
     name: "Restday",
     kind: "Web & mobile",
     summary: "8-week burnout recovery programme.",
